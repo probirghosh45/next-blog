@@ -19,7 +19,7 @@ async function connectToDB(){
 
 async function startServer() {
   try {
-    // await connectToDB()
+    await connectToDB()
     server = http.createServer(app);
     server.listen(process.env.PORT, () => {
       console.log(`🚀 Server is running on port ${process.env.PORT}`);
